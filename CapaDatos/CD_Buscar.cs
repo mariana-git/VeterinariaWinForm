@@ -12,7 +12,7 @@ namespace CapaDatos
         #region ATRIBUTOS
         private int idMascota, ficha, idResponsable, numeroCalle, piso, idLocalidad, idPartido, idProvincia, idTelefono, idMail, idCastracion, idEspecimen, idVacuna;
         private DateTime fechaNacimientoMascota;
-        private string nombreMascota, nombreResponsable, apellidoResponsable, calle, departamento, email, parametroDeBusqueda, consulta;
+        private string nombreMascota, nombreResponsable, apellidoResponsable, dni, calle, departamento, email, parametroDeBusqueda, consulta;
         #endregion
         #region PROPIEDADES
         public int IdMascota { get => idMascota; set => idMascota = value; }
@@ -36,6 +36,7 @@ namespace CapaDatos
         public string Departamento { get => departamento; set => departamento = value; }
         public string Email { get => email; set => email = value; }
         public string ParametroDeBusqueda { get => parametroDeBusqueda; set => parametroDeBusqueda = value; }
+        public string DNI { get => dni; set => dni = value; }
         #endregion
 
         private DataTable DT = new DataTable();
@@ -44,8 +45,8 @@ namespace CapaDatos
         public DataTable Mascotas()
         {
             DT.Clear();
-            if (ParametroDeBusqueda != "") consulta = $"SELECT * FROM MASCOTAS WHERE (Nombre LIKE '%{ParametroDeBusqueda}%'" +
-                    $" OR Ficha LIKE '%{ParametroDeBusqueda}%' ORDER BY Nombre;";
+            if (ParametroDeBusqueda != "") consulta = $"SELECT * FROM MASCOTAS WHERE Nombre LIKE '%{ParametroDeBusqueda}%'" +
+                    $" OR Ficha LIKE '%{ParametroDeBusqueda}%';";
             else consulta = "SELECT * FROM MASCOTAS;";
 
             DT = ModoConectado(consulta);
@@ -54,9 +55,9 @@ namespace CapaDatos
         public DataTable Responsales()
         {
             DT.Clear();
-            if (ParametroDeBusqueda != "") consulta = $"SELECT * FROM RESPONSABLES WHERE (Nombre LIKE '%{ParametroDeBusqueda}%'" +
-                    $" OR Apellido LIKE '%{ParametroDeBusqueda}%' OR Documento LIKE '%{ParametroDeBusqueda}%' OR Legajo LIKE '%{ParametroDeBusqueda}%');";
-            else consulta = "SELECT * FROM MASCOTAS;";
+            if (ParametroDeBusqueda != "") consulta = $"SELECT * FROM RESPONSABLES WHERE Nombre LIKE '%{ParametroDeBusqueda}%'" +
+                    $" OR Apellido LIKE '%{ParametroDeBusqueda}%' OR DNI LIKE '%{ParametroDeBusqueda}%';";
+            else consulta = "SELECT * FROM RESPONSABLES;";
             DT = ModoConectado(consulta);
             return DT;
         }

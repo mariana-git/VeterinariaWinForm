@@ -3,7 +3,7 @@ using System.Data;
 
 namespace CapaDatos
 {
-    public class CD_Agregar: CD_EjecutarSQL
+    public class CD_AgregarResponsale: CD_EjecutarSQL
     {
         #region ATRIBUTOS
         private int idMascota, ficha, idResponsable, numeroCalle, piso, idLocalidad, idPartido, idProvincia, idTelefono, idMail, idCastracion, idEspecie, idVacuna,telefono;
@@ -37,29 +37,7 @@ namespace CapaDatos
         #endregion
 
         #region METODOS 
-        public void Mascota()
-        {
-            consulta = $"INSERT INTO MASCOTAS (Ficha, Nombre, FechaNac) VALUES ({Ficha},{NombreMascota},{FechaNacimientoMascota:dd/mm/yyyy});"; //String fnew = String.Format( f.ToShortDateString(), "dd/mm/aaaa");
-            ModoDesconectado(consulta);
-        }
-        public void MascotaVacuna()
-        {
-            consulta = "INSERT INTO MASCOTAS_VACUNAS (IDVacuna, IDMascota, FechaInoculacion) " +
-                $"VALUES ({IdVacuna},{IdMascota},{FechaInoculacion:dd/mm/yyyy});";
-            ModoDesconectado(consulta);
-        }
-
-        public void MascotaEspecie()
-        {
-            consulta = $"INSERT INTO MASCOTAS_ESPECIE (IDMascota, IDEspecie) VALUES ({IdMascota},{IdEspecie});";
-            ModoDesconectado(consulta);
-        }
-
-        public void MascotaCastracion()
-        {
-            consulta = $"INSERT INTO MASCOTAS_CASTRACION (IDMascota, IDCastracion, Fecha) VALUES ({IdMascota},{IdCastracion},{FechaCastracion:dd/mm/yyyy});";
-            ModoDesconectado(consulta);
-        }
+       
         public void Responsable()
         {
             consulta = "INSERT INTO RESPONSABLES (Nombre, Apelllido, Calle, Numero, Piso, Departamento, IDLocalidad) " +
@@ -74,11 +52,6 @@ namespace CapaDatos
         public void ResponsableTelefono()
         {
             consulta = $"INSERT INTO RESPONSABLES_TELEFONOS (IDResponsable, IDTelefono, Numero) VALUES ({IdResponsable},{IdTelefono},{Telefono});";
-            ModoDesconectado(consulta);
-        }
-        public void MascotaResponsable()
-        {
-            consulta = $"INSERT INTO MASCOTAS_RESPONSABLES (IDMascota,IDResponsable) VALUES ({IdMascota},{IdResponsable});";
             ModoDesconectado(consulta);
         }
         #endregion

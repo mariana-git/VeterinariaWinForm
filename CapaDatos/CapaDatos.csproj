@@ -41,12 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CD_Agregar.cs" />
+    <Compile Include="Mascotas\CD_AgregarCastracion.cs" />
+    <Compile Include="Mascotas\CD_AgregarConsultas.cs" />
+    <Compile Include="Mascotas\CD_AgregarEspecies.cs" />
+    <Compile Include="Mascotas\CD_AgregarVacunas.cs" />
+    <Compile Include="Responsables\CD_AgregarResponsale.cs" />
     <Compile Include="CD_Buscar.cs" />
     <Compile Include="CD_Conexion.cs" />
     <Compile Include="CD_Eliminar.cs" />
     <Compile Include="CD_Modificar.cs" />
     <Compile Include="CD_EjecutarSQL.cs" />
+    <Compile Include="Mascotas\CD_AgregarMascota.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
