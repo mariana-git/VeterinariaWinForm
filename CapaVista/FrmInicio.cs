@@ -43,18 +43,6 @@ namespace CapaVista
             }
             else subMenu.Visible = false;
         }
-        private void BtnMascotas_Click(object sender, EventArgs e)
-        {
-            OcultarSubMenu();
-            MostrarSubMenu(panelSMMascotas);
-        }
-
-        private void BtnResponsables_Click(object sender, EventArgs e)
-        {
-            OcultarSubMenu();
-            MostrarSubMenu(panelSMResponsables);
-        }
-
         private void BtnBuscarM_Click(object sender, EventArgs e)
         {
             AbrirUC(new ucBusqueda("MASCOTAS"));
@@ -63,13 +51,35 @@ namespace CapaVista
 
         private void BtnBuscarR_Click(object sender, EventArgs e)
         {
-            AbrirUC(new ucBusqueda("RESPONSABLES"));
             OcultarSubMenu();
+            AbrirUC(new ucBusqueda("RESPONSABLES"));
         }
 
         private void BtnAgregarM_Click(object sender, EventArgs e)
         {
+            OcultarSubMenu();
             AbrirUC(new UcMascotas());
+        }
+
+        private void BtnAgregarR_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnMascotas_MouseHover(object sender, EventArgs e)
+        {
+            OcultarSubMenu();
+            MostrarSubMenu(panelSMMascotas);
+        }
+
+        private void BtnResponsables_MouseHover(object sender, EventArgs e)
+        {
+            OcultarSubMenu();
+            MostrarSubMenu(panelSMResponsables);
+        }
+
+        private void PanelCentral_MouseHover(object sender, EventArgs e)
+        {
             OcultarSubMenu();
         }
     }

@@ -45,7 +45,7 @@ namespace CapaVista.Mascotas
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dgvMascotaVacunas = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbCastracion = new System.Windows.Forms.ComboBox();
             this.dateTimeCastracion = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -56,8 +56,7 @@ namespace CapaVista.Mascotas
             this.btnCerrar = new System.Windows.Forms.Button();
             this.dgvConsultas = new System.Windows.Forms.DataGridView();
             this.gbxConsultas = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.chklistboxTipoConsulta = new System.Windows.Forms.CheckedListBox();
+            this.chckListaTipoConsulta = new System.Windows.Forms.CheckedListBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.rtbDetalleConsulta = new System.Windows.Forms.RichTextBox();
             this.flPanelMascota.SuspendLayout();
@@ -93,7 +92,7 @@ namespace CapaVista.Mascotas
             this.gbMascota.Controls.Add(this.label2);
             this.gbMascota.Controls.Add(this.label1);
             this.gbMascota.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
-            this.gbMascota.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(237)))), ((int)(((byte)(229)))));
+            this.gbMascota.ForeColor = System.Drawing.Color.Aqua;
             this.gbMascota.Location = new System.Drawing.Point(3, 3);
             this.gbMascota.Name = "gbMascota";
             this.gbMascota.Size = new System.Drawing.Size(286, 141);
@@ -165,7 +164,7 @@ namespace CapaVista.Mascotas
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
-            this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(237)))), ((int)(((byte)(229)))));
+            this.groupBox3.ForeColor = System.Drawing.Color.Aqua;
             this.groupBox3.Location = new System.Drawing.Point(3, 150);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(286, 115);
@@ -215,7 +214,7 @@ namespace CapaVista.Mascotas
             // 
             this.groupBox4.Controls.Add(this.dgvMascotaVacunas);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
-            this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(237)))), ((int)(((byte)(229)))));
+            this.groupBox4.ForeColor = System.Drawing.Color.Aqua;
             this.groupBox4.Location = new System.Drawing.Point(3, 271);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(286, 144);
@@ -230,17 +229,17 @@ namespace CapaVista.Mascotas
             this.dgvMascotaVacunas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMascotaVacunas.Location = new System.Drawing.Point(3, 39);
             this.dgvMascotaVacunas.Name = "dgvMascotaVacunas";
-            this.dgvMascotaVacunas.Size = new System.Drawing.Size(283, 90);
+            this.dgvMascotaVacunas.Size = new System.Drawing.Size(280, 90);
             this.dgvMascotaVacunas.TabIndex = 24;
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.comboBox1);
+            this.groupBox5.Controls.Add(this.cmbCastracion);
             this.groupBox5.Controls.Add(this.dateTimeCastracion);
             this.groupBox5.Controls.Add(this.label6);
             this.groupBox5.Controls.Add(this.label8);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
-            this.groupBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(237)))), ((int)(((byte)(229)))));
+            this.groupBox5.ForeColor = System.Drawing.Color.Aqua;
             this.groupBox5.Location = new System.Drawing.Point(3, 421);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(286, 113);
@@ -248,13 +247,13 @@ namespace CapaVista.Mascotas
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "CASTRACIÓN";
             // 
-            // comboBox1
+            // cmbCastracion
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(141, 40);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(133, 26);
-            this.comboBox1.TabIndex = 21;
+            this.cmbCastracion.FormattingEnabled = true;
+            this.cmbCastracion.Location = new System.Drawing.Point(141, 40);
+            this.cmbCastracion.Name = "cmbCastracion";
+            this.cmbCastracion.Size = new System.Drawing.Size(133, 26);
+            this.cmbCastracion.TabIndex = 21;
             // 
             // dateTimeCastracion
             // 
@@ -292,7 +291,7 @@ namespace CapaVista.Mascotas
             // 
             this.groupBox2.Controls.Add(this.dgvMascotasResponsables);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
-            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(237)))), ((int)(((byte)(229)))));
+            this.groupBox2.ForeColor = System.Drawing.Color.Aqua;
             this.groupBox2.Location = new System.Drawing.Point(3, 540);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(286, 144);
@@ -370,12 +369,11 @@ namespace CapaVista.Mascotas
             // 
             // gbxConsultas
             // 
-            this.gbxConsultas.Controls.Add(this.button2);
-            this.gbxConsultas.Controls.Add(this.chklistboxTipoConsulta);
+            this.gbxConsultas.Controls.Add(this.chckListaTipoConsulta);
             this.gbxConsultas.Controls.Add(this.btnGuardar);
             this.gbxConsultas.Controls.Add(this.rtbDetalleConsulta);
             this.gbxConsultas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
-            this.gbxConsultas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(237)))), ((int)(((byte)(229)))));
+            this.gbxConsultas.ForeColor = System.Drawing.Color.Aqua;
             this.gbxConsultas.Location = new System.Drawing.Point(368, 310);
             this.gbxConsultas.Name = "gbxConsultas";
             this.gbxConsultas.Size = new System.Drawing.Size(689, 414);
@@ -383,42 +381,26 @@ namespace CapaVista.Mascotas
             this.gbxConsultas.TabStop = false;
             this.gbxConsultas.Text = "CONSULTAS";
             // 
-            // button2
+            // chckListaTipoConsulta
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(250)))), ((int)(((byte)(85)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(237)))), ((int)(((byte)(229)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button2.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.button2.Location = new System.Drawing.Point(365, 380);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(162, 28);
-            this.button2.TabIndex = 32;
-            this.button2.Text = "EDITAR";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // chklistboxTipoConsulta
-            // 
-            this.chklistboxTipoConsulta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(0)))), ((int)(((byte)(88)))));
-            this.chklistboxTipoConsulta.CheckOnClick = true;
-            this.chklistboxTipoConsulta.ColumnWidth = 200;
-            this.chklistboxTipoConsulta.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chklistboxTipoConsulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(237)))), ((int)(((byte)(229)))));
-            this.chklistboxTipoConsulta.FormattingEnabled = true;
-            this.chklistboxTipoConsulta.Items.AddRange(new object[] {
+            this.chckListaTipoConsulta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(0)))), ((int)(((byte)(88)))));
+            this.chckListaTipoConsulta.CheckOnClick = true;
+            this.chckListaTipoConsulta.ColumnWidth = 200;
+            this.chckListaTipoConsulta.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chckListaTipoConsulta.ForeColor = System.Drawing.Color.Aqua;
+            this.chckListaTipoConsulta.FormattingEnabled = true;
+            this.chckListaTipoConsulta.Items.AddRange(new object[] {
             "Consulta",
             "Vacunación",
             "Tratamiento",
             "Urgencia",
             "Cirugia",
             "Estudios Clínicos"});
-            this.chklistboxTipoConsulta.Location = new System.Drawing.Point(20, 289);
-            this.chklistboxTipoConsulta.MultiColumn = true;
-            this.chklistboxTipoConsulta.Name = "chklistboxTipoConsulta";
-            this.chklistboxTipoConsulta.Size = new System.Drawing.Size(646, 50);
-            this.chklistboxTipoConsulta.TabIndex = 25;
+            this.chckListaTipoConsulta.Location = new System.Drawing.Point(20, 289);
+            this.chckListaTipoConsulta.MultiColumn = true;
+            this.chckListaTipoConsulta.Name = "chckListaTipoConsulta";
+            this.chckListaTipoConsulta.Size = new System.Drawing.Size(646, 50);
+            this.chckListaTipoConsulta.TabIndex = 25;
             // 
             // btnGuardar
             // 
@@ -429,23 +411,25 @@ namespace CapaVista.Mascotas
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.btnGuardar.Location = new System.Drawing.Point(178, 380);
+            this.btnGuardar.Location = new System.Drawing.Point(248, 380);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(162, 28);
             this.btnGuardar.TabIndex = 24;
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // rtbDetalleConsulta
             // 
             this.rtbDetalleConsulta.BackColor = System.Drawing.SystemColors.Window;
+            this.rtbDetalleConsulta.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbDetalleConsulta.Location = new System.Drawing.Point(20, 51);
             this.rtbDetalleConsulta.Name = "rtbDetalleConsulta";
             this.rtbDetalleConsulta.Size = new System.Drawing.Size(646, 221);
             this.rtbDetalleConsulta.TabIndex = 0;
             this.rtbDetalleConsulta.Text = "";
             // 
-            // ucMascotas
+            // UcMascotas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -456,7 +440,7 @@ namespace CapaVista.Mascotas
             this.Controls.Add(this.flPanelMascota);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnEliminar);
-            this.Name = "ucMascotas";
+            this.Name = "UcMascotas";
             this.Size = new System.Drawing.Size(1101, 741);
             this.flPanelMascota.ResumeLayout(false);
             this.gbMascota.ResumeLayout(false);
@@ -499,14 +483,13 @@ namespace CapaVista.Mascotas
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.DataGridView dgvConsultas;
         private System.Windows.Forms.GroupBox gbxConsultas;
-        private System.Windows.Forms.CheckedListBox chklistboxTipoConsulta;
-        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.CheckedListBox chckListaTipoConsulta;
         private System.Windows.Forms.RichTextBox rtbDetalleConsulta;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox cmbRaza;
         private System.Windows.Forms.ComboBox cmbEspecie;
         private System.Windows.Forms.DataGridView dgvMascotaVacunas;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbCastracion;
         private System.Windows.Forms.DataGridView dgvMascotasResponsables;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }

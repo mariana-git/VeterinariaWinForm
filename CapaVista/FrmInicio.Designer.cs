@@ -30,7 +30,7 @@ namespace CapaVista
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInicio));
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flpMenus = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnMascotas = new System.Windows.Forms.Button();
@@ -45,26 +45,26 @@ namespace CapaVista
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panelCentral = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.flpMenus.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelSMMascotas.SuspendLayout();
             this.panelSMResponsables.SuspendLayout();
             this.SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // flpMenus
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(19)))), ((int)(((byte)(131)))));
-            this.flowLayoutPanel1.Controls.Add(this.pictureBox1);
-            this.flowLayoutPanel1.Controls.Add(this.label2);
-            this.flowLayoutPanel1.Controls.Add(this.btnMascotas);
-            this.flowLayoutPanel1.Controls.Add(this.panelSMMascotas);
-            this.flowLayoutPanel1.Controls.Add(this.btnResponsables);
-            this.flowLayoutPanel1.Controls.Add(this.panelSMResponsables);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(169, 801);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.flpMenus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(19)))), ((int)(((byte)(131)))));
+            this.flpMenus.Controls.Add(this.pictureBox1);
+            this.flpMenus.Controls.Add(this.label2);
+            this.flpMenus.Controls.Add(this.btnMascotas);
+            this.flpMenus.Controls.Add(this.panelSMMascotas);
+            this.flpMenus.Controls.Add(this.btnResponsables);
+            this.flpMenus.Controls.Add(this.panelSMResponsables);
+            this.flpMenus.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flpMenus.Location = new System.Drawing.Point(0, 0);
+            this.flpMenus.Name = "flpMenus";
+            this.flpMenus.Size = new System.Drawing.Size(169, 801);
+            this.flpMenus.TabIndex = 0;
             // 
             // pictureBox1
             // 
@@ -92,7 +92,7 @@ namespace CapaVista
             // btnMascotas
             // 
             this.btnMascotas.AutoSize = true;
-            this.btnMascotas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(250)))), ((int)(((byte)(85)))));
+            this.btnMascotas.BackColor = System.Drawing.Color.Aqua;
             this.btnMascotas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMascotas.FlatAppearance.BorderSize = 0;
             this.btnMascotas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -103,7 +103,7 @@ namespace CapaVista
             this.btnMascotas.TabIndex = 1;
             this.btnMascotas.Text = "Mascotas";
             this.btnMascotas.UseVisualStyleBackColor = false;
-            this.btnMascotas.Click += new System.EventHandler(this.BtnMascotas_Click);
+            this.btnMascotas.MouseHover += new System.EventHandler(this.BtnMascotas_MouseHover);
             // 
             // panelSMMascotas
             // 
@@ -116,9 +116,10 @@ namespace CapaVista
             // 
             // btnAgregarM
             // 
-            this.btnAgregarM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(240)))), ((int)(((byte)(211)))));
+            this.btnAgregarM.BackColor = System.Drawing.Color.Aqua;
             this.btnAgregarM.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregarM.FlatAppearance.BorderSize = 0;
+            this.btnAgregarM.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnAgregarM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnAgregarM.Location = new System.Drawing.Point(1, 49);
@@ -131,9 +132,10 @@ namespace CapaVista
             // 
             // btnBuscarM
             // 
-            this.btnBuscarM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(240)))), ((int)(((byte)(211)))));
+            this.btnBuscarM.BackColor = System.Drawing.Color.Aqua;
             this.btnBuscarM.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscarM.FlatAppearance.BorderSize = 0;
+            this.btnBuscarM.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnBuscarM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnBuscarM.Location = new System.Drawing.Point(3, 3);
@@ -148,7 +150,6 @@ namespace CapaVista
             // 
             this.btnResponsables.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(250)))), ((int)(((byte)(85)))));
             this.btnResponsables.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnResponsables.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(72)))), ((int)(((byte)(203)))));
             this.btnResponsables.FlatAppearance.BorderSize = 0;
             this.btnResponsables.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnResponsables.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -158,7 +159,7 @@ namespace CapaVista
             this.btnResponsables.TabIndex = 2;
             this.btnResponsables.Text = "Responsables";
             this.btnResponsables.UseVisualStyleBackColor = false;
-            this.btnResponsables.Click += new System.EventHandler(this.BtnResponsables_Click);
+            this.btnResponsables.MouseHover += new System.EventHandler(this.BtnResponsables_MouseHover);
             // 
             // panelSMResponsables
             // 
@@ -171,9 +172,10 @@ namespace CapaVista
             // 
             // btnAgregarR
             // 
-            this.btnAgregarR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(240)))), ((int)(((byte)(211)))));
+            this.btnAgregarR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(250)))), ((int)(((byte)(85)))));
             this.btnAgregarR.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregarR.FlatAppearance.BorderSize = 0;
+            this.btnAgregarR.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
             this.btnAgregarR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnAgregarR.Location = new System.Drawing.Point(1, 49);
@@ -182,12 +184,14 @@ namespace CapaVista
             this.btnAgregarR.TabIndex = 4;
             this.btnAgregarR.Text = "Agregar";
             this.btnAgregarR.UseVisualStyleBackColor = false;
+            this.btnAgregarR.Click += new System.EventHandler(this.BtnAgregarR_Click);
             // 
             // btnBuscarR
             // 
-            this.btnBuscarR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(240)))), ((int)(((byte)(211)))));
+            this.btnBuscarR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(250)))), ((int)(((byte)(85)))));
             this.btnBuscarR.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscarR.FlatAppearance.BorderSize = 0;
+            this.btnBuscarR.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
             this.btnBuscarR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnBuscarR.Location = new System.Drawing.Point(3, 3);
@@ -233,6 +237,7 @@ namespace CapaVista
             this.panelCentral.Name = "panelCentral";
             this.panelCentral.Size = new System.Drawing.Size(1101, 741);
             this.panelCentral.TabIndex = 4;
+            this.panelCentral.MouseHover += new System.EventHandler(this.PanelCentral_MouseHover);
             // 
             // FrmInicio
             // 
@@ -243,11 +248,11 @@ namespace CapaVista
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.flpMenus);
             this.Name = "FrmInicio";
             this.Text = "Veterinaria";
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
+            this.flpMenus.ResumeLayout(false);
+            this.flpMenus.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelSMMascotas.ResumeLayout(false);
             this.panelSMResponsables.ResumeLayout(false);
@@ -257,7 +262,7 @@ namespace CapaVista
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flpMenus;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnMascotas;
         private System.Windows.Forms.Button btnResponsables;
