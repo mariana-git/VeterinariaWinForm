@@ -1,5 +1,6 @@
 ﻿using System;
 using CapaLogica;
+using CapaLogica.Mascotas;
 using System.Windows.Forms;
 
 namespace CapaVista
@@ -22,7 +23,7 @@ namespace CapaVista
             try
             {
                 dgvBuscar.DataSource = null;
-                if (lblOrigen.Text == "MASCOTAS") dgvBuscar.DataSource = new CL_Mascotas().Buscar(txtBucar.Text);
+                if (lblOrigen.Text == "MASCOTAS") dgvBuscar.DataSource = new CL_BuscarMascotas().Buscar(txtBucar.Text);
                 if (lblOrigen.Text == "RESPONSABLES") dgvBuscar.DataSource = new CL_Responsables().Buscar(txtBucar.Text);
             }
             catch (Exception ex)

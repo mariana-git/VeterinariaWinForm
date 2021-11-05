@@ -1,17 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CapaLogica.Mascotas;
 using System.Windows.Forms;
 
 namespace CapaVista.Mascotas
 {
     public partial class UcMascotas : UserControl
     {
+        CL_AgregarConsulta agregarEnCL = new CL_AgregarConsulta();
         public UcMascotas()
         {
             InitializeComponent();
@@ -62,18 +58,41 @@ namespace CapaVista.Mascotas
         }
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("posta?", "ELIMINAR PERMANENTE", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);   
+            MessageBox.Show("Desea archivar de manera permanente la ficha de esta mascota?", "ELIMINAR PERMANENTE", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);   
         }
-
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            //guardar consulta
-            MessageBox.Show("Guardado con éxito!");
-            rtbDetalleConsulta.Clear();      
+            try
+            {
+                //guardar consulta
+                agregarEnCL.ArrayCategoriaConsulta = ItemsSeleccionados();
+                agregarEnCL.CargarCategoriasConsultas();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "ERROR");
+            }
+
+                rtbDetalleConsulta.Clear();
         }
-        private void ItemsSeleccionados(object sender, EventArgs e)
+        private int[] ItemsSeleccionados()
         {
- 
+            //con este método armo una lista donde acumulo los índices de los items seleccionados del checklistbox y luego la transformo en un array
+
+            List<int> listaItems = new List<int>();
+            //obtiene cada indice seleccionado
+            foreach (int indexChecked in chckListaTipoConsulta.CheckedIndices)
+            {                
+                listaItems.Add(indexChecked);   //la variable indexChecked contiene el indice del item             
+            }
+            int[] arrayLista = listaItems.ToArray();
+
+            //deselecciono los items
+            for (int i = 0; i < chckListaTipoConsulta.Items.Count; i++)
+            {
+                chckListaTipoConsulta.SetItemChecked(i, false);
+            }
+            return arrayLista;
         }
     }
 }

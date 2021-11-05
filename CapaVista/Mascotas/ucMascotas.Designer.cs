@@ -56,6 +56,7 @@ namespace CapaVista.Mascotas
             this.btnCerrar = new System.Windows.Forms.Button();
             this.dgvConsultas = new System.Windows.Forms.DataGridView();
             this.gbxConsultas = new System.Windows.Forms.GroupBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.chckListaTipoConsulta = new System.Windows.Forms.CheckedListBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.rtbDetalleConsulta = new System.Windows.Forms.RichTextBox();
@@ -369,6 +370,7 @@ namespace CapaVista.Mascotas
             // 
             // gbxConsultas
             // 
+            this.gbxConsultas.Controls.Add(this.listBox1);
             this.gbxConsultas.Controls.Add(this.chckListaTipoConsulta);
             this.gbxConsultas.Controls.Add(this.btnGuardar);
             this.gbxConsultas.Controls.Add(this.rtbDetalleConsulta);
@@ -380,6 +382,15 @@ namespace CapaVista.Mascotas
             this.gbxConsultas.TabIndex = 21;
             this.gbxConsultas.TabStop = false;
             this.gbxConsultas.Text = "CONSULTAS";
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 18;
+            this.listBox1.Location = new System.Drawing.Point(542, 114);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(120, 94);
+            this.listBox1.TabIndex = 26;
             // 
             // chckListaTipoConsulta
             // 
@@ -425,7 +436,7 @@ namespace CapaVista.Mascotas
             this.rtbDetalleConsulta.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbDetalleConsulta.Location = new System.Drawing.Point(20, 51);
             this.rtbDetalleConsulta.Name = "rtbDetalleConsulta";
-            this.rtbDetalleConsulta.Size = new System.Drawing.Size(646, 221);
+            this.rtbDetalleConsulta.Size = new System.Drawing.Size(356, 221);
             this.rtbDetalleConsulta.TabIndex = 0;
             this.rtbDetalleConsulta.Text = "";
             // 
@@ -491,5 +502,6 @@ namespace CapaVista.Mascotas
         private System.Windows.Forms.ComboBox cmbCastracion;
         private System.Windows.Forms.DataGridView dgvMascotasResponsables;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

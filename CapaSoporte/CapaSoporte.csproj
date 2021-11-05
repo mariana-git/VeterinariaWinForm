@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EBC349F2-B95E-49A2-AB20-C03D93FC4F55}</ProjectGuid>
+    <ProjectGuid>{AC80D112-CB2A-4E3F-AE57-E2CD363260A3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CapaLogica</RootNamespace>
-    <AssemblyName>CapaLogica</AssemblyName>
+    <RootNamespace>CapaSoporte</RootNamespace>
+    <AssemblyName>CapaSoporte</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,17 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Mascotas\CL_AgregarConsulta.cs" />
-    <Compile Include="Mascotas\CL_AgregarMascotas.cs" />
-    <Compile Include="Responsables\CL_Responsables.cs" />
-    <Compile Include="Mascotas\CL_BuscarMascotas.cs" />
+    <Compile Include="CS_CheckListBox.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">
-      <Project>{2e5cd3a3-30fe-4edc-ad19-8839e9324ae0}</Project>
-      <Name>CapaDatos</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

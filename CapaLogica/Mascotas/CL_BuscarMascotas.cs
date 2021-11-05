@@ -5,7 +5,7 @@ using CapaDatos;
 
 namespace CapaLogica
 {
-    public class CL_Mascotas
+    public class CL_BuscarMascotas
     {
         private CD_Buscar buscarEnCD = new CD_Buscar();
         private DataTable DT = new DataTable();

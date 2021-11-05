@@ -6,16 +6,18 @@ using System.Threading.Tasks;
 
 namespace CapaDatos.Mascotas
 {
-    class CD_AgregarConsultas:CD_EjecutarSQL
+    public class CD_AgregarConsultas:CD_EjecutarSQL
     {
         private string query;
-        public object IdConsulta { get; private set; }
-        public object IdTipoConsulta { get; private set; }
-        public object TipoConsultaDescripcion { get; private set; }
+        private int idConsulta, idTipoConsulta, tipoConsultaDescripcion;
 
-        public void Consultas()
+        public int IdConsulta { get => idConsulta; set => idConsulta = value; }
+        public int IdTipoConsulta { get => idTipoConsulta; set => idTipoConsulta = value; }
+        public int TipoConsultaDescripcion { get => tipoConsultaDescripcion; set => tipoConsultaDescripcion = value; }
+
+        public void AgregarCategoríasConsulta()
         {
-            query = $"INSERT INTO CONSULTAS (IDConsulta,IDTipoConsulta) VALUES ({IdConsulta},{IdTipoConsulta});";
+            query = $"INSERT INTO CONSULTAS (IDTipoConsulta) VALUES ({IdTipoConsulta});";
             ModoDesconectado(query);
         }
         public void TipoConsulta()
